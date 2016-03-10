@@ -4,8 +4,8 @@ var webpack = require('webpack')
 var WebpackDevServer = require('webpack-dev-server')
 var webpackConfig = require('./webpack.config.js')
 
-let port = 9100
-let docs = Object.create(webpackConfig)
+var port = 9100
+var docs = Object.create(webpackConfig)
 
 docs.entry = ['webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server', docs.entry[0]]
 
@@ -24,7 +24,7 @@ new WebpackDevServer(webpack(docs), {
     colors: true,
     exclude: ['node_modules', 'components'],
   },
-}).listen(port, 'localhost', err => {
+}).listen(port, 'localhost', function(err) {
   if (err) throw new Error('webpack-dev-server', err)
   console.log('[webpack-dev-server]', 'http://localhost:' + port + '/')
 })

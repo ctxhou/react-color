@@ -187,7 +187,7 @@ class HomeFeature extends ReactCSS.Component {
                     <div is="label">Slider</div>
                   </div>
                   <div is="split" className="flexbox-fix">
-                    <div is="compact">
+                    <div is="compact" style={{width: '300px'}}>
                       <CompactPicker color={ this.state } onChangeComplete={ this.handleChangeComplete } />
                       <div is="label">Compact</div>
                     </div>
