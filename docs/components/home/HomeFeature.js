@@ -139,6 +139,7 @@ class HomeFeature extends ReactCSS.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div is="feature">
         <div is="graphic" ref="container">

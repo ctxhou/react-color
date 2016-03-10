@@ -24,7 +24,7 @@ export class CompactColor extends ReactCSS.Component {
           left: '5px',
           height: '9px',
           width: '9px',
-          background: '#' + this.props.hex,
+          background: this.props.hex,
         },
         Hex: {
           style: {
@@ -47,6 +47,9 @@ export class CompactColor extends ReactCSS.Component {
               display: 'none',
             },
           },
+        },
+        RGB_wrap: {
+          flex: '3'
         },
         RGB: {
           style: {
@@ -100,8 +103,8 @@ export class CompactColor extends ReactCSS.Component {
     return (
       <div is="fields" className="flexbox-fix">
         <div is="active" />
-        <EditableInput is="Hex" label="hex" value={ '#' + this.props.hex } onChange={ this.handleChange } />
-        <div>
+        <EditableInput is="Hex" label="hex" value={ this.props.hex } onChange={ this.handleChange } />
+        <div is="RGB_wrap">
           <EditableInput is="RGB" label="r" value={ this.props.rgb.r } onChange={ this.handleChange } />
           <EditableInput is="RGB" label="g" value={ this.props.rgb.g } onChange={ this.handleChange } />
           <EditableInput is="RGB" label="b" value={ this.props.rgb.b } onChange={ this.handleChange } />
