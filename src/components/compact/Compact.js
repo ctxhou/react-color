@@ -53,8 +53,6 @@ export class Compact extends ReactCSS.Component {
       }
     }
 
-    console.log(this.props)
-
     return (
       <Raised is="Compact">
         <div is="compact">

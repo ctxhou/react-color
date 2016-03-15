@@ -93,7 +93,7 @@ export class CompactColor extends ReactCSS.Component {
       })
     } else {
       this.props.onChange({
-        hex: data,
+        hex: data.hex,
         source: 'hex',
       })
     }
@@ -104,11 +104,6 @@ export class CompactColor extends ReactCSS.Component {
       <div is="fields" className="flexbox-fix">
         <div is="active" />
         <EditableInput is="Hex" label="hex" value={ this.props.hex } onChange={ this.handleChange } />
-        <div is="RGB_wrap">
-          <EditableInput is="RGB" label="r" value={ this.props.rgb.r } onChange={ this.handleChange } />
-          <EditableInput is="RGB" label="g" value={ this.props.rgb.g } onChange={ this.handleChange } />
-          <EditableInput is="RGB" label="b" value={ this.props.rgb.b } onChange={ this.handleChange } />
-        </div>
       </div>
     )
   }
